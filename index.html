@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Economia</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-topline">
+          <span>Economia dell'età digitale</span>
+          <span>44 pagine filtrate · 12 moduli · 5 grafici</span>
+        </div>
+        <div class="hero-main">
+          <div class="hero-copy">
+            <p class="eyebrow">Indice ragionato</p>
+            <h1>Economia</h1>
+            <p class="hero-text">Micro, macro, digitale. Parti dai moduli oppure apri subito i grafici più probabili da spiegare.</p>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-card">
+              <span class="panel-label">Parti da qui</span>
+              <ul>
+                <li>Domanda, offerta ed equilibrio</li>
+                <li>Scelta del consumatore</li>
+                <li>Isoquanti, isocosti, concorrenza, monopolio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hero-strips">
+          <div class="hero-strip">
+            <span class="strip-kicker">Micro</span>
+            <strong>Domanda, offerta, elasticità, consumatore, impresa</strong>
+          </div>
+          <div class="hero-strip">
+            <span class="strip-kicker">Macro</span>
+            <strong>PIL, lavoro, moneta, fluttuazioni, economia aperta</strong>
+          </div>
+          <div class="hero-strip">
+            <span class="strip-kicker">Grafici</span>
+            <strong>Etichette corrette, scenari mobili, lettura da orale</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar">
+          <section class="sidebar-block">
+            <label for="searchInput">Cerca un concetto</label>
+            <input id="searchInput" type="search" placeholder="Es. elasticità, PIL, monopolio" />
+          </section>
+          <section class="sidebar-block">
+            <div class="filter-row" id="tagFilters"></div>
+          </section>
+          <section class="sidebar-block">
+            <h2>Moduli</h2>
+            <nav id="moduleList" class="module-list"></nav>
+          </section>
+        </aside>
+
+        <section class="content">
+          <nav class="top-tabs" id="topTabs">
+            <button class="tab active" data-tab="study">Contenuto</button>
+            <button class="tab" data-tab="focus">Interrogami</button>
+            <button class="tab" data-tab="graphs">Grafici</button>
+          </nav>
+
+          <section class="tab-panel active" id="studyPanel">
+            <div id="studyCard"></div>
+          </section>
+
+          <section class="tab-panel" id="focusPanel">
+            <div id="focusMount"></div>
+          </section>
+
+          <section class="tab-panel" id="graphsPanel">
+            <div class="graph-layout">
+              <div class="graph-selector" id="graphSelector"></div>
+              <div class="graph-stage">
+                <div class="graph-meta">
+                  <p class="eyebrow" id="graphEyebrow"></p>
+                  <h2 id="graphTitle"></h2>
+                  <p id="graphRule"></p>
+                </div>
+                <canvas id="graphCanvas" width="960" height="640"></canvas>
+                <div id="graphNotes" class="graph-notes"></div>
+              </div>
+              <div class="graph-controls" id="graphControls"></div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
